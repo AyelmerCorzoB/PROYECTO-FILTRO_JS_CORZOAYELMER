@@ -3,7 +3,7 @@ export const tableRocketColum1 = async (Rocket)=>{
     let information__table__1 = document.querySelector("#information__table__1");
     information__table__1.innerHTML = "";
     let h3 = document.createElement("h3");
-    h3.textContent = "Information rocket"
+    h3.textContent = "Imformation rocket"
     let hr = document.createElement("hr");
     information__table__1.append(h3, hr)
 

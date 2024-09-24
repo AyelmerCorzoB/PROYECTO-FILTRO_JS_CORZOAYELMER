@@ -51,11 +51,12 @@ body {
     margin: 12px 0;
     height: 100px;
 }
-@keyframes load{
+/*APAGATE FASTIDIOSA */
+/* @keyframes load{
     100%{
         background-position: -100% 0;
     }
-}
+} */
 .main {
     /* background: orange; */
     height: 90vh;
@@ -72,7 +73,7 @@ body {
 .description__item {
     /* background: blue; */
     overflow-y: auto;
-    height: 75vh;
+    height: 60vh;
 }
 
 .description__buttom {
@@ -81,6 +82,20 @@ body {
     justify-content: center;
     align-items: center;
     height: 110px;
+    
+    column-gap: 5px;
+}
+
+.description__buttom a {
+    
+    text-decoration: none;
+}
+
+.description__buttom .systems  {
+    background-color: white ;
+    color: #1d1f38;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .description__container {
@@ -127,7 +142,6 @@ body {
 .section__information__1>.carousel__item {
     /* flex: 1; */
     min-width: 24%;
-    /* background-color: purple; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,6 +168,7 @@ body {
 .progress__value{
     display: flex;
     flex-direction: column;
+    
     transform: rotate(180deg); 
 }
 /*  */
@@ -192,13 +207,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .information__table__1 {
-    width: 85%;
+    width: 86%;
     margin: 10px auto;
-    /* background: darkblue; */
     grid-area: table__colum__1;
+    ::-webkit-scrollbar {
+       width: 5px;
+    }
 }
 .information__table__1 h3{
     text-transform: uppercase;
@@ -229,10 +247,12 @@ body {
     color: var(--color--five);
 }
 .section__image {
-    /* background: orange; */
+ 
     grid-area: colum__2;
     display: flex;
+    
     overflow-x: auto;
+    height: 250px;
     align-items: center;
 }
 
@@ -279,10 +299,13 @@ body {
     align-items: center;
 }
 .information__table__2 {
-    width: 85%;
+    width: 86%;
     margin: 10px auto;
     /* background: darkblue; */
     grid-area: table__colum__2;
+    ::-webkit-scrollbar {
+        width: 5px;
+     }
 }
 .information__table__2 h3{
     text-transform: uppercase;
@@ -340,8 +363,8 @@ body {
     width: 0;
     height: 0;
     border-left: 0px solid transparent;
-    border-right: 48px solid transparent;
-    border-bottom: 70px solid var(--color--one);
+    border-right: 47px solid transparent;
+    border-bottom: 90px solid var(--color--one);
 }
 .footer ul::before{
     content: "";
@@ -351,9 +374,9 @@ body {
     bottom: 0;
     width: 0;
     height: 0;
-    border-left: 48px solid transparent;
+    border-left: 47px solid transparent;
     border-right: 0px solid transparent;
-    border-bottom: 70px solid  var(--color--one);
+    border-bottom: 90px solid  var(--color--one);
     /* border-top-right-radius: 30px; */
 }
 .footer ul li {

@@ -34,4 +34,4 @@ capsules.addEventListener("click", async(e)=>{
 })
 
 
-capsules.click();
+rocket.click();

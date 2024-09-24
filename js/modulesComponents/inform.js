@@ -29,7 +29,7 @@ export const informRocketEngineThrustSeaLevel = async(thrust_sea_level)=>{
     divFirst.append(divFirstChildren)
     div.append(divFirst)
     let section__information__1 = document.querySelector("#section__information__1");
-    section__information__1.innerHTML = "";
+    
     section__information__1.append(div)
 
     // <div class="carousel__item">
