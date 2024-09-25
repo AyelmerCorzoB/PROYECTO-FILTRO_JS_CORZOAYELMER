@@ -10,6 +10,8 @@
 
 body {
     background: linear-gradient(var(--color--one), var(--color--one--rgba));
+    height: 100vh;
+    overflow-y: hidden;
 }
 
 *::-webkit-scrollbar {
@@ -52,11 +54,11 @@ body {
     height: 100px;
 }
 /*APAGATE FASTIDIOSA */
- /* @keyframes load{
+ @keyframes load{
     100%{
         background-position: -100% 0;
     }
-}  */
+} 
 .main {
     /* background: orange; */
     height: 90vh;
@@ -70,40 +72,24 @@ body {
     grid-area: nav__1;
 }
 
+/* SECCION IZQUIERDA DE ROCKETS */
 .description__item {
-    /* background: blue; */
+    /* background: blue;  */
     overflow-y: auto;
-    height: 60vh;
-}
-
-.description__buttom {
-    /* background: #00ff84; */
+    width: 15vw;
+    height: 80vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 110px;
-    
-    column-gap: 5px;
+    flex-direction: column;
 }
 
-.description__buttom a {
-    
-    text-decoration: none;
-}
-
-.description__buttom .systems  {
-    background-color: white ;
-    color: #1d1f38;
-    border-radius: 5px;
-    padding: 10px;
-}
 
 .description__container {
-    /* background: violet; */
+    /* background: violet;   */
     display: flex;
+    flex-direction: column;
     gap: 10px;
     margin: 0 var(--layout-description-container-x);
-    margin-bottom: 25px;
+    margin-bottom: 2vh;
 }
 
 .description__container div:last-child h3 {
@@ -118,9 +104,8 @@ body {
 }
 
 .main__section {
-    /* background: green; */
+    background: green; 
     grid-area: main;
-    position: relative;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 2.3fr 5fr 1fr;
@@ -131,7 +116,7 @@ body {
 }
 
 .section__information__1 {
-    /* background: red; */
+    
     grid-area: section__header;
     display: flex;
     overflow-x: auto;
@@ -141,7 +126,7 @@ body {
 
 .section__information__1>.carousel__item {
     /* flex: 1; */
-    min-width: 24%;
+    min-width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,7 +158,7 @@ body {
 }
 /*  */
 .section__information__container {
-    /* background: #d9ff00; */
+    background: rgb(98, 107, 46);
     grid-area: section__main;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -182,7 +167,7 @@ body {
 }
 
 .section__information__2 {
-    /* background: blue; */
+    background: blue;
     grid-area: colum__1;
     display: grid;
     grid-template-rows: 1fr 1.3fr;
@@ -203,7 +188,7 @@ body {
 .section__information__2 div:first-child>.carousel__item {
     /* flex: 1; */
     min-width: 48%;
-    /* background-color: purple; */
+    background-color: purple;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,8 +196,10 @@ body {
 }
 
 .information__table__1 {
-    width: 86%;
-    margin: 10px auto;
+    background-color: brown;
+    width: 15vw;
+
+    margin:10px  auto;
     grid-area: table__colum__1;
     ::-webkit-scrollbar {
        width: 5px;
@@ -220,6 +207,7 @@ body {
 }
 .information__table__1 h3{
     text-transform: uppercase;
+    font-size: 16px;
     padding: 0 25px;
     margin-bottom: 5px;
     color: var(--color--two);
@@ -230,8 +218,8 @@ body {
     border-color: var(--color--two);
 }
 .table__container__1{
-    /* background: orange; */
-    height: 160px;
+    background: orange;
+    height: 230px;
     overflow-y: auto;
     padding: 0 25px;
 }
@@ -247,20 +235,17 @@ body {
     color: var(--color--five);
 }
 .section__image {
- 
     grid-area: colum__2;
     display: flex;
-    
     overflow-x: auto;
     height: 250px;
     align-items: center;
 }
 
 .section__image>.carousel__item {
-    /* background: violet; */
+    background: violet;
     text-align: center;
     margin: 0 10px;
-
 }
 
 .section__image>.carousel__item img {
@@ -269,10 +254,11 @@ body {
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0px 0px 10px var(--color--one);
+    
 }
 
 .section__information__3 {
-    /* background: violet; */
+    background: violet; 
     grid-area: colum__3;
     display: grid;
     grid-template-rows: 1fr 1.3fr;
@@ -282,12 +268,14 @@ body {
 }
 
 .section__information__3 div:first-child {
-    /* background: #d9ff00; */
+    background: #d9ff00; 
     grid-area: carusel__colum__2;
     display: flex;
     overflow-x: auto;
     gap: 10px;
     justify-content: space-evenly;
+    
+    
 }
 
 .section__information__3 div:first-child>.carousel__item {
@@ -299,9 +287,9 @@ body {
     align-items: center;
 }
 .information__table__2 {
-    width: 86%;
-    margin: 10px auto;
-    /* background: darkblue; */
+    width: 15vw;
+    margin: auto;
+    background: rgb(46, 46, 85); 
     grid-area: table__colum__2;
     ::-webkit-scrollbar {
         width: 5px;
@@ -319,7 +307,7 @@ body {
     border-color: var(--color--two);
 }
 .table__container__2{
-    /* background: orange; */
+    background: rgb(0, 110, 255); 
     height: 160px;
     overflow-y: auto;
     padding: 0 25px;
@@ -338,9 +326,10 @@ body {
 
 
 .footer {
-    /* background: coral; */
+    background: coral; 
     grid-area: section__footer;
     display: grid;
+    margin-top: 0.2vh;
     grid-template-columns: 1fr 8fr 1fr;
     grid-template-areas: ". footer__menu .";
 }
@@ -363,7 +352,7 @@ body {
     width: 0;
     height: 0;
     border-left: 0px solid transparent;
-    border-right: 47px solid transparent;
+    border-right: 46px solid transparent;
     border-bottom: 90px solid var(--color--one);
 }
 .footer ul::before{
@@ -374,7 +363,7 @@ body {
     bottom: 0;
     width: 0;
     height: 0;
-    border-left: 47px solid transparent;
+    border-left: 46px solid transparent;
     border-right: 0px solid transparent;
     border-bottom: 90px solid  var(--color--one);
     /* border-top-right-radius: 30px; */
