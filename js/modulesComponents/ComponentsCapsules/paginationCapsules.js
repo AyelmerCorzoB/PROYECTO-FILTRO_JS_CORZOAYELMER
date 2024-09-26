@@ -6,7 +6,7 @@ import {
     informationCapsuleLastUpdate
 } from "./informationCapusles.js"
 import { nameCapsules } from "../ComponentsGlobals/title.js";
-import { load, clear } from "../ComponentsGlobals/loadAndClear.js";
+import { clear } from "../ComponentsGlobals/loadAndClear.js";
 const getCapsulesId = async(e)=>{
     e.preventDefault();
     // console.log(e.target);
@@ -26,10 +26,6 @@ const getCapsulesId = async(e)=>{
     await informationCapsuleWaterLandings(capsules.water_landings)
     await informationCapsuleLastUpdate(capsules.last_update)
 
-    await imageRockets(capsules.flickr_images);
-
-    await tableRocketColum1(capsules)
-    await tableRocketColum2(capsules)
 
     await progressRocketWeight(capsules)
     await progressPayloadWeights(capsules)

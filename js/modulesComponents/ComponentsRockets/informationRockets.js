@@ -201,6 +201,10 @@ export const informRocketEngineThrustVacuum = async(thrust_vacuum)=>{
 }
 
 
+
+
+
+
 import { 
     getRocketMassTotal, 
     getRocketPayloadWeightsTotal, 
