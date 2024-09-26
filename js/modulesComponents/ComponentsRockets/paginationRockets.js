@@ -1,11 +1,11 @@
 import { 
     getAllRockets, 
     getAllRocketsId
-} from "../modules/rockets.js";
+} from "../../modules/rockets.js";
 
 import { 
     nameRockets 
-} from "./title.js";
+} from "../ComponentsGlobals/title.js";
 
 import { 
     informationRockets,
@@ -19,11 +19,11 @@ import {
 import { 
     tableRocketColum1, 
     tableRocketColum2
-} from "./tables.js";
+} from "../ComponentsTables/tablesRockets.js";
 
 import { 
     imageRockets 
-} from "./card.js";
+} from "../ComponentCards/card.js";
 
 import { 
     progressRocketWeight,
@@ -32,10 +32,10 @@ import {
     progressDiameterRocket,
     progressSecondStageDiameterRocket,
     progressSecondStageHeightRocket,
-} from "./progressBar.js";
+} from "./informationRockets.js";
 import {
     clear
-} from "./loadAndClear.js"
+} from "../ComponentsGlobals/loadAndClear.js"
 ///
 
 
@@ -87,7 +87,7 @@ export const paginationRockets = async()=>{
     });
     
     let [a1,a2,a3,a4] = div.children
-    a3.click();
+    a1.click();
     // <div class="buttom__paginacion">
     //     <a href="#">&laquo;</a> 
     //     <a href="#" class="activo">1</a>
@@ -99,4 +99,3 @@ export const paginationRockets = async()=>{
     
     return div;
 }
-

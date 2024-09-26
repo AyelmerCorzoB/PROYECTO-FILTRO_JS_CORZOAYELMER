@@ -1,15 +1,15 @@
 import { 
     paginationCapsules
-} from "./modulesComponents/paginationCapsules.js";
+} from "./modulesComponents/ComponentsCapsules/paginationCapsules.js";
 
 import { 
     paginationRockets
- } from "./modulesComponents/paginationRockets.js";
+ } from "./modulesComponents/ComponentsRockets/paginationRockets.js";
 
 import {
     load,
     clear
-} from "./modulesComponents/loadAndClear.js"
+} from "./modulesComponents/ComponentsGlobals/loadAndClear.js"
 
 let footerSelect = async(e, id)=>{
     e.preventDefault();
@@ -39,6 +39,7 @@ capsules.addEventListener("click", async(e)=>{
     paginacion.innerHTML = ""
     paginacion.append(await paginationCapsules())
 })
+
 
 
 

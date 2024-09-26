@@ -1,4 +1,4 @@
-export const tableRocketColum1 = async (Rocket)=>{
+export const tableRocketColum1 = async (capsules)=>{
 
     let information__table__1 = document.querySelector("#information__table__1");
     information__table__1.innerHTML = "";

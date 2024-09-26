@@ -1,4 +1,4 @@
-export const informationCapsules = async(serial, status)=>{
+export const informationRockets = async(country, description)=>{
     let div = document.createElement('div');
     div.classList.add('description__container')
     let divFirst = document.createElement('div');
@@ -10,7 +10,7 @@ export const informationCapsules = async(serial, status)=>{
     let h3 = document.createElement('h3');
     h3.textContent = country
     let small = document.createElement('small');
-    small.textContent = status
+    small.textContent = description
     divLast.append(h3, small);
     div.append(divFirst, divLast);
 
