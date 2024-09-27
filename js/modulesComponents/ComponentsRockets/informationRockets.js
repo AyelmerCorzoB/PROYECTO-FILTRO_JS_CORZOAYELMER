@@ -129,7 +129,7 @@ export const informRocketEngineThrustSeaLevel = async(thrust_sea_level)=>{
     let pocentaje = (thrust_sea_level.kN * 100) / totalKN
 
     let div = document.createElement('div');
-    div.classList.add("carousel__item")
+    div.classList.add("information__table__1")
     let divFirst = document.createElement('div');
     divFirst.classList.add("item__progress__bar");
     divFirst.style = `background: radial-gradient(closest-side, #1d1f38 85%, transparent 85% 100%), conic-gradient(var(--color--three) ${pocentaje}%, transparent 0)`

@@ -19,7 +19,7 @@ export const load = async()=>{
         <div class="load" style="height: 150px;"></div>
     `;
 
-    let information__table__1 = document.querySelector("#information__table__1")
+    let information__table__1 = document.querySelector(".information__table__1")
     console.log(information__table__1)
     // information__table__1.innerHTML = `
     //     <div class="load" style="height: 160px;"></div>
@@ -48,6 +48,7 @@ export const load = async()=>{
 export const clear = async () => {
     let header__title = document.querySelector("#header__title");
     if (header__title) header__title.innerHTML = ``;
+
 
     let description__item = document.querySelector("#description__item");
     if (description__item) description__item.innerHTML = ``;

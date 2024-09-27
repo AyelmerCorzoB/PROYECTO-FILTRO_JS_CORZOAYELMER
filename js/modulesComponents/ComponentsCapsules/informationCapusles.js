@@ -129,7 +129,8 @@ export const informationCapsuleLaunches = async(launches) => {
     // Itera sobre la lista de lanzamientos
     launches.forEach((launchId) => {
         let div = document.createElement('div');
-        div.classList.add("carousel__item");
+        div.classList.add("information__table__1");
+        div.id= "information__table__1";
         
         let strong = document.createElement('strong');
         strong.textContent = `IDENTIFICACION DE LANZAMIENTO: ${launchId}`;
