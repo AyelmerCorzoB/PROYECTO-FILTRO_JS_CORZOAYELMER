@@ -3,8 +3,8 @@ import {
     informationCapsules,
     informationCapsuleReuseCounts,
     informationCapsuleWaterLandings,
-    informationCapsuleLastUpdate,
-    informationCapsuleLaunches
+    informationCapsuleLaunches,
+    informationCapsuleLastUpdate    
 } from "./informationCapusles.js"
 import { nameCapsules } from "../ComponentsGlobals/title.js";
 import { clear } from "../ComponentsGlobals/loadAndClear.js";
@@ -17,11 +17,7 @@ const getCapsulesId = async (e) => {
     }
     e.target.classList.add('activo');
 
-    // Elimina la sección de navegación (ajusta el selector según tu estructura)
-    const information__2 = document.querySelector("#information__2"); // Cambia esto si el selector es diferente
-    if (information__2) {
-        information__2.remove();
-    }
+   
 
     let capsules = await getAllCapsulesId(e.target.id);
     await clear();
@@ -33,12 +29,12 @@ const getCapsulesId = async (e) => {
     await informationCapsuleLastUpdate(capsules.last_update);
     await informationCapsuleLaunches(capsules.launches);
 
-    await progressRocketWeight(capsules);
-    await progressPayloadWeights(capsules);
-    await progressHeightRocket(capsules);
-    await progressDiameterRocket(capsules);
-    await progressSecondStageDiameterRocket(capsules);
-    await progressSecondStageHeightRocket(capsules);
+    // await progressRocketWeight(capsules);
+    // await progressPayloadWeights(capsules);
+    // await progressHeightRocket(capsules);
+    // await progressDiameterRocket(capsules);
+    // await progressSecondStageDiameterRocket(capsules);
+    // await progressSecondStageHeightRocket(capsules);
 }
 
 

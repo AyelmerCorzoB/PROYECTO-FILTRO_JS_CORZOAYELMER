@@ -20,9 +20,10 @@ export const load = async()=>{
     `;
 
     let information__table__1 = document.querySelector("#information__table__1")
-    information__table__1.innerHTML = `
-        <div class="load" style="height: 160px;"></div>
-    `;
+    console.log(information__table__1)
+    // information__table__1.innerHTML = `
+    //     <div class="load" style="height: 160px;"></div>
+    // `;
 
     let section__image = document.querySelector("#section__image")
     section__image.innerHTML = `

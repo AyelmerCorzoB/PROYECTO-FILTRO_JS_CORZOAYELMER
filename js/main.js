@@ -40,7 +40,7 @@ capsules.addEventListener("click", async(e)=>{
     paginacion.append(await paginationCapsules())
 })
 
-
-
-
-rocket.click();
+capsules.click();
+setTimeout(() => {
+    rocket.click();
+}, 2000);
