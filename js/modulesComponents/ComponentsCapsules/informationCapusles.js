@@ -117,6 +117,30 @@ export const informationCapsuleLastUpdate = async(last_update)=>{
     // </div>
 }
 
-export const informationCapusleLaunches = async(launches) => {
-    
-}
+export const informationCapsuleLaunches = async(launches) => {
+    // Verifica que los datos llegan correctamente
+    console.log(launches);
+
+    // Selecciona la sección del DOM donde vas a añadir los elementos
+    let section__information__2 = document.querySelector(".section__information__2");
+
+    if (!section__information__2) {
+        console.error("El contenedor #section__information__2 no existe en el DOM.");
+        return; // Si no existe, termina la función.
+    }
+
+    // Limpia la sección antes de agregar nuevos lanzamientos
+    section__information__2.innerHTML = '';
+
+    // Itera sobre la lista de lanzamientos
+    launches.forEach((launchId) => {
+        let div = document.createElement('div');
+        div.classList.add("carousel__item");
+        
+        let strong = document.createElement('strong');
+        strong.textContent = `IDENTIFICACION DE LANZAMIENTO: ${launchId}`;
+        
+        div.appendChild(strong);
+        section__information__2.appendChild(div);
+    });
+};

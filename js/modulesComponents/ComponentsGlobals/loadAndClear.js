@@ -44,27 +44,25 @@ export const load = async()=>{
         <div class="load"></div>
     `;
 }
-export const clear = async()=>{
+export const clear = async () => {
     let header__title = document.querySelector("#header__title");
-    header__title.innerHTML = ``;
+    if (header__title) header__title.innerHTML = ``;
 
     let description__item = document.querySelector("#description__item");
-    description__item.innerHTML = ``;
+    if (description__item) description__item.innerHTML = ``;
 
-    let section__information__1 = document.querySelector("#section__information__1")
-    section__information__1.innerHTML = ``;
+    let section__information__1 = document.querySelector("#section__information__1");
+    if (section__information__1) section__information__1.innerHTML = ``;
 
-    let information__table__1 = document.querySelector("#information__table__1")
-    information__table__1.innerHTML = ``;
+    let information__table__1 = document.querySelector("#information__table__1");
+    if (information__table__1) information__table__1.innerHTML = ``;
 
-    let section__image = document.querySelector("#section__image")
-    section__image.innerHTML = ``;
+    let section__image = document.querySelector("#section__image");
+    if (section__image) section__image.innerHTML = ``;
 
+    let information__table__2 = document.querySelector("#information__table__2");
+    if (information__table__2) information__table__2.innerHTML = ``;
 
-    let information__table__2 = document.querySelector("#information__table__2")
-    information__table__2.innerHTML = ``;
-
-    let information__2 = document.querySelector("#information__2")
-    information__2.innerHTML = ``;
-
-}
+    let information__2 = document.querySelector("#information__2");
+    if (information__2) information__2.innerHTML = ``;
+};

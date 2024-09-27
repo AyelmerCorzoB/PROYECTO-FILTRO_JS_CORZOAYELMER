@@ -3,36 +3,42 @@ import {
     informationCapsules,
     informationCapsuleReuseCounts,
     informationCapsuleWaterLandings,
-    informationCapsuleLastUpdate
+    informationCapsuleLastUpdate,
+    informationCapsuleLaunches
 } from "./informationCapusles.js"
 import { nameCapsules } from "../ComponentsGlobals/title.js";
 import { clear } from "../ComponentsGlobals/loadAndClear.js";
-const getCapsulesId = async(e)=>{
+
+const getCapsulesId = async (e) => {
     e.preventDefault();
-    // console.log(e.target);
     let a = e.target.parentElement.children;
-    for(let val of a){
+    for (let val of a) {
         val.classList.remove('activo');
     }
     e.target.classList.add('activo');
-    
-    
+
+    // Elimina la sección de navegación (ajusta el selector según tu estructura)
+    const information__2 = document.querySelector("#information__2"); // Cambia esto si el selector es diferente
+    if (information__2) {
+        information__2.remove();
+    }
+
     let capsules = await getAllCapsulesId(e.target.id);
     await clear();
     
-    await informationCapsules(capsules.type, capsules.status)
-    await nameCapsules(capsules.serial)
-    await informationCapsuleReuseCounts(capsules.reuse_count)
-    await informationCapsuleWaterLandings(capsules.water_landings)
-    await informationCapsuleLastUpdate(capsules.last_update)
+    await informationCapsules(capsules.type, capsules.status);
+    await nameCapsules(capsules.serial);
+    await informationCapsuleReuseCounts(capsules.reuse_count);
+    await informationCapsuleWaterLandings(capsules.water_landings);
+    await informationCapsuleLastUpdate(capsules.last_update);
+    await informationCapsuleLaunches(capsules.launches);
 
-
-    await progressRocketWeight(capsules)
-    await progressPayloadWeights(capsules)
-    await progressHeightRocket(capsules)
-    await progressDiameterRocket(capsules)
-    await progressSecondStageDiameterRocket(capsules)
-    await progressSecondStageHeightRocket(capsules)
+    await progressRocketWeight(capsules);
+    await progressPayloadWeights(capsules);
+    await progressHeightRocket(capsules);
+    await progressDiameterRocket(capsules);
+    await progressSecondStageDiameterRocket(capsules);
+    await progressSecondStageHeightRocket(capsules);
 }
 
 
@@ -57,7 +63,7 @@ export const paginationCapsules = async()=>{
     //     <a href="#" class="activo">1</a>
     //     <a href="#">2</a>
     //     <a href="#">3</a>
-    //     <a href="#">4</a>
+    //     <a href="#">4</a>g
     //     <a href="#">&raquo;</a>
     //ETC
     // </div>

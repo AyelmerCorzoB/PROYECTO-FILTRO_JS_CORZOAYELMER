@@ -7,7 +7,11 @@ export const imageRockets = async(flickr_images)=>{
         let img = document.createElement("img");
         img.setAttribute("src", val)
         img.setAttribute("referrerpolicy", "no-referrer")
-        div.append(img)
+        let subtitle = document.createElement("small")
+        subtitle.textContent = "Desplaza para ver mas ..."
+        subtitle.style.color = "white"
+        div.append(img, subtitle)
+        
         divs.push(div);
     });
     section__image.append(...divs)

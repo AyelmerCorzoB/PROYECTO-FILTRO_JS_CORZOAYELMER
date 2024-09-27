@@ -86,27 +86,40 @@ export const getCapsuleLastUpdate  = async() =>{
     let data = await res.json();
     return data;
 }
-export const getCapsuleLaunches  = async() =>{
+export const getCapsuleLaunches = async () => {
     let config = {
-        headers:{
-            "content-type": "application/json"
+        headers: {
+            "content-type": "application/json" // Asegúrate de que está bien escrito
         },
         method: "POST",
         body: JSON.stringify({
+            "query": {}, 
             "options": {
                 "select": {
-                    "launches": 1
+                    "launches": 1 
                 },
                 "sort": {
-                    "launches": "desc"
+                    "launches": "desc" 
                 }
             }
         })
+    };
+
+    try {
+        let res = await fetch("https://api.spacexdata.com/v4/capsules/query", config);
+        if (!res.ok) {
+            throw new Error(`HTTP error! status: ${res.status}`);
+        }
+        let data = await res.json();
+        // Verifica que obtienes los datos esperados
+        console.log(data.docs); // data.docs contiene los resultados de la consulta
+        return data.docs; // Devuelve los documentos (capsulas) con lanzamientos
+    } catch (error) {
+        console.error('Error fetching capsule launches:', error);
+        return [];
     }
-    let res = await fetch("https://api.spacexdata.com/v4/capsules/query", config);
-    let data = await res.json();
-    return data;
-}
+};
+
 export const getCapsuleSerial  = async() =>{
     let config = {
         headers:{
