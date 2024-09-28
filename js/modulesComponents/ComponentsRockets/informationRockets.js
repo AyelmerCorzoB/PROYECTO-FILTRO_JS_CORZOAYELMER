@@ -1,4 +1,3 @@
-
 export const informationRockets = async(country, description)=>{
     let div = document.createElement('div');
     div.classList.add('description__container')
@@ -377,47 +376,48 @@ export const progressDiameterRocket = async(Rockets)=>{
     //     </div>
     // </div>
 }
-export const progressSecondStageDiameterRocket = async(Rockets)=>{
-    let {meters} = await getRocketSecondStageCompositeFairingDiameterTotal();
+export const progressSecondStageDiameterRocket = async (Rockets) => {
+    let { meters } = await getRocketSecondStageCompositeFairingDiameterTotal();
     let conterDiv = [];
+
     [Rockets.second_stage.payloads.composite_fairing.diameter].forEach(val => {
         let divInformationContainer = document.createElement("div");
-        divInformationContainer.classList.add("information__container")
+        divInformationContainer.classList.add("information__container");
+
         let divFirst = document.createElement("div");
         let labelFist = document.createElement("label");
         labelFist.textContent = `Diameter rocket shield :`;
-    
+
         let ProgressFist = document.createElement("progress");
         ProgressFist.max = meters;
-        ProgressFist.value = `${val.meters}`;
-        ProgressFist.textContent = `${val.meters}%`;
-    
-    
+
+        // Check if val.meters is a finite number before assigning it to the value
+        let meterValue = (val && isFinite(val.meters)) ? val.meters : 0;
+        ProgressFist.value = meterValue;  // Safely assign value
+        ProgressFist.textContent = `${meterValue}%`;  // Use meterValue here as well
+
         let divLast = document.createElement("div");
         let spanLast = document.createElement("span");
-        let numMeters = new Intl.NumberFormat('cop').format(val.meters)
-        let numFeet = new Intl.NumberFormat('cop').format(val.feet)
-        spanLast.innerHTML = `${numMeters} M <br> ${numFeet} F`
-    
-        divFirst.append(labelFist)
-        divFirst.append(ProgressFist)
-        divLast.append(spanLast)
-        divInformationContainer.append(divFirst)
-        divInformationContainer.append(divLast)
-        conterDiv.push(divInformationContainer)
+
+        // Format numbers safely, using fallback values if necessary
+        let numMeters = val && isFinite(val.meters) ? new Intl.NumberFormat('cop').format(val.meters) : '0';
+        let numFeet = val && isFinite(val.feet) ? new Intl.NumberFormat('cop').format(val.feet) : '0';
+
+        spanLast.innerHTML = `${numMeters} M <br> ${numFeet} F`;
+
+        divFirst.append(labelFist);
+        divFirst.append(ProgressFist);
+        divLast.append(spanLast);
+        divInformationContainer.append(divFirst);
+        divInformationContainer.append(divLast);
+
+        conterDiv.push(divInformationContainer);
     });
+
     let information__2 = document.querySelector("#information__2");
-    information__2.append(...conterDiv)
-    // <div class="information__container">
-    //     <div>
-    //         <label>Totle :</label>
-    //         <progress max="100" value="70">70%</progress>
-    //     </div>
-    //     <div>
-    //         <span>0 kg <br> 0 lb</span>
-    //     </div>
-    // </div>
-}
+    information__2.append(...conterDiv);
+};
+
 export const progressSecondStageHeightRocket = async(Rockets)=>{
     let {meters} = await getRocketSecondStageCompositeFairingHeightTotal();
     let conterDiv = [];

@@ -1,6 +1,7 @@
+// Importaciones necesarias
 import { 
     getAllRockets, 
-    getAllRocketsId
+    getAllRocketsId 
 } from "../../modules/rockets.js";
 
 import { 
@@ -13,12 +14,13 @@ import {
     informationFirstFlightRocket,
     informationWebRocket,
     informRocketEngineThrustSeaLevel, 
-    informRocketEngineThrustVacuum
+    informRocketEngineThrustVacuum,
+    progressRocketWeight
 } from "./informationRockets.js";
 
 import { 
     tableRocketColum1, 
-    tableRocketColum2
+    tableRocketColum2 
 } from "../ComponentsTables/tablesRockets.js";
 
 import { 
@@ -26,77 +28,88 @@ import {
 } from "../ComponentCards/card.js";
 
 import { 
-    progressRocketWeight,
-    progressPayloadWeights, 
-    progressHeightRocket, 
-    progressDiameterRocket,
+    progressPayloadWeights,
+    progressHeightRocket,
     progressSecondStageDiameterRocket,
     progressSecondStageHeightRocket,
 } from "./informationRockets.js";
-import {
-    clear
-} from "../ComponentsGlobals/loadAndClear.js"
-///
 
+import { 
+    clear 
+} from "../ComponentsGlobals/loadAndClear.js";
 
-
-const getRocketsId = async(e)=>{
+// Función para obtener los detalles del cohete
+const getRocketsId = async (e) => {
     e.preventDefault();
-    // console.log(e.target);
     let a = e.target.parentElement.children;
-    for(let val of a){
+    for (let val of a) {
         val.classList.remove('activo');
     }
     e.target.classList.add('activo');
-    
+
     let Rocket = await getAllRocketsId(e.target.id);
     await clear();
-    
-    await informationRockets(Rocket.country, Rocket.description)
-    await nameRockets(Rocket.name)
-    await informationLaunchCostRocket(Rocket.cost_per_launch)
-    await informationFirstFlightRocket(Rocket.first_flight)
-    await informationWebRocket(Rocket.wikipedia)
+
+    await informationRockets(Rocket.country, Rocket.description);
+    await nameRockets(Rocket.name);
+    await informationLaunchCostRocket(Rocket.cost_per_launch);
+    await informationFirstFlightRocket(Rocket.first_flight);
+    await informationWebRocket(Rocket.wikipedia);
 
     await informRocketEngineThrustSeaLevel(Rocket.engines.thrust_sea_level);
     await informRocketEngineThrustVacuum(Rocket.engines.thrust_vacuum);
-    await informRocketEngineThrustSeaLevel(Rocket.engines.thrust_sea_level);
     await imageRockets(Rocket.flickr_images);
 
-    await tableRocketColum1(Rocket)
-    await tableRocketColum2(Rocket)
+    await tableRocketColum1(Rocket);
+    await tableRocketColum2(Rocket);
 
-    await progressRocketWeight(Rocket)
-    await progressPayloadWeights(Rocket)
-    await progressHeightRocket(Rocket)
-    await progressDiameterRocket(Rocket)
-    await progressSecondStageDiameterRocket(Rocket)
-    await progressSecondStageHeightRocket(Rocket)
-}
-export const paginationRockets = async()=>{
-    let rockets = await getAllRockets();
-    let div = document.createElement("div");
-    div.classList.add("buttom__paginacion")
-  
-    rockets.forEach((val,id) => {
-        let a = document.createElement("a");
-        a.setAttribute("href","#");
-        a.id = val.id;
-        a.textContent = id+1;
-        a.addEventListener("click", getRocketsId)
-        div.appendChild(a);
-    });
-    
-    let [a1,a2,a3,a4] = div.children
-    a1.click();
-    // <div class="buttom__paginacion">
-    //     <a href="#">&laquo;</a> 
-    //     <a href="#" class="activo">1</a>
-    //     <a href="#">2</a>
-    //     <a href="#">3</a>
-    //     <a href="#">4</a>
-    //     <a href="#">&raquo;</a>
-    // </div>
-    
-    return div;
+    await progressRocketWeight(Rocket);
+    await progressHeightRocket(Rocket);
+    await progressPayloadWeights(Rocket);
+    await progressSecondStageDiameterRocket(Rocket);
+    await progressSecondStageHeightRocket(Rocket);
+};
+
+// Función para crear botones de paginación
+export const paginationRockets = async () => {
+    try {
+        let rockets = await getAllRockets();
+        let div = document.createElement("div");
+        div.classList.add("buttom__paginacion");
+
+        // Verificamos si se obtuvieron cohetes
+        if (rockets && rockets.length > 0) {
+            rockets.forEach((val, id) => {
+                let a = document.createElement("a");
+                a.setAttribute("href", "#");
+                a.id = val.id;
+                a.textContent = id + 1; // El índice comienza en 0, así que le sumamos 1
+                a.addEventListener("click", getRocketsId);
+                div.appendChild(a);
+            });
+
+            // Simula un clic en el segundo botón
+            if (div.children.length > 1) {
+                let a2 = div.children[1];
+                a2.click();
+            }
+        } else {
+            console.error("No se encontraron cohetes.");
+        }
+
+        return div;
+    } catch (error) {
+        console.error("Error al obtener cohetes:", error);
+    }
+};
+
+// Carga y limpieza inicial
+await clear();
+let paginationDiv = await paginationRockets();
+let paginacion = document.querySelector("#paginacion");
+if (paginacion) {
+    paginacion.innerHTML = ""; // Limpiamos el contenido existente
+    paginacion.appendChild(paginationDiv); // Añadimos los botones de paginación
+} else {
+    console.error("El elemento con ID 'paginacion' no se encontró en el DOM.");
 }

@@ -66,3 +66,5 @@ export const paginationCapsules = async()=>{
     
     return div;
 }
+await clear()
+paginationCapsules()
