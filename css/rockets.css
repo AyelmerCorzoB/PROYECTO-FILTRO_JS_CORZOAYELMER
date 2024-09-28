@@ -10,7 +10,6 @@
 body {
     background: linear-gradient(var(--color--one), var(--color--one--rgba));
     height: 100%;
-    overflow: hidden;
 }
 
 *::-webkit-scrollbar {
@@ -80,7 +79,6 @@ body {
 
 /* SECCION IZQUIERDA DE ROCKETS */
 .description__item {
-    background: blue;  
     overflow-y: auto;
     width: 100%;
     height: 80%;
@@ -294,12 +292,13 @@ body {
 
 
 .footer {
+    background-color: brown;
     position: fixed;
     bottom: 0;
-    width: 60%;
+    width: 100%;
     display: grid;
-    height: 100px;
-    grid-template-columns: 1fr 8fr 1fr;
+    height: 90px;
+    grid-template-columns: 38px 8fr 38px;
     grid-template-areas: ". footer__menu .";
     z-index: 1000; /* para asegurar que el footer quede siempre por encima del contenido */
 }
@@ -363,7 +362,6 @@ body {
 
 .information__item {
     background: violet; 
-    overflow-y: auto;
 }
 
 .information__buttom {
@@ -377,7 +375,6 @@ body {
 .buttom__paginacion {
     display: inline-block;
     overflow-y: auto;
-    height: 15vh;
 }
 
 .buttom__paginacion a {

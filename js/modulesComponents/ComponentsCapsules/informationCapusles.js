@@ -13,10 +13,8 @@ export const informationCapsules = async(serial,last_update)=>{
     small.textContent = last_update
     divLast.append(h3, small);
     div.append(divFirst, divLast);
-
     let description__item = document.querySelector("#description__item")
     description__item.append(div)
-
     // <div class="description__container">
     //     <div>
     //         <img src="http://www.example.com">
@@ -27,7 +25,6 @@ export const informationCapsules = async(serial,last_update)=>{
     //     </div>
     // </div>
 }
-
 export const informationCapsuleReuseCounts = async(reuse_count)=>{
     let div = document.createElement('div');
     div.classList.add('description__container')
@@ -43,10 +40,8 @@ export const informationCapsuleReuseCounts = async(reuse_count)=>{
     small.textContent = reuse_count;
     divLast.append(h3, small);
     div.append(divFirst, divLast);
-
     let description__item = document.querySelector("#description__item")
     description__item.append(div)
-
     // <div class="description__container">
     //     <div>
     //         <img src="http://www.example.com">
@@ -57,7 +52,6 @@ export const informationCapsuleReuseCounts = async(reuse_count)=>{
     //     </div>
     // </div>
 }
-
 export const informationCapsuleWaterLandings = async(water_landings)=>{
     let div = document.createElement('div');
     div.classList.add('description__container')
@@ -73,10 +67,8 @@ export const informationCapsuleWaterLandings = async(water_landings)=>{
     small.textContent = water_landings
     divLast.append(h3, small);
     div.append(divFirst, divLast);
-
     let description__item = document.querySelector("#description__item")
     description__item.append(div)
-
     // <div class="description__container">
     //     <div>
     //         <img src="http://www.example.com">
@@ -87,7 +79,6 @@ export const informationCapsuleWaterLandings = async(water_landings)=>{
     //     </div>
     // </div>
 }
-
 export const informationCapsuleLastUpdate = async(last_update)=>{
     let div = document.createElement('div');
     div.classList.add('description__container')
@@ -105,7 +96,6 @@ export const informationCapsuleLastUpdate = async(last_update)=>{
     div.append(divFirst, divLast);
     let description__item = document.querySelector("#description__item")
     description__item.append(div)
-
     // <div class="description__container">
     //     <div>
     //         <img src="http://www.example.com">
@@ -116,26 +106,6 @@ export const informationCapsuleLastUpdate = async(last_update)=>{
     //     </div>
     // </div>
 }
-
-export const informationCapsuleLaunches = async(launches) => {
-    // Verifica que los datos llegan correctamente
-    console.log(launches);
-
-    // Selecciona la sección del DOM donde vas a añadir los elementos
-    let section__information__2 = document.querySelector(".section__information__2");
-
-    section__information__2.innerHTML = '';
-
-    // Itera sobre la lista de lanzamientos
-    launches.forEach((launchId) => {
-        let div = document.createElement('div');
-        div.classList.add("information__table__1");
-        div.id= "information__table__1";
-        
-        let strong = document.createElement('strong');
-        strong.textContent = `IDENTIFICACION DE LANZAMIENTO: ${launchId}`;
-        
-        div.appendChild(strong);
-        section__information__2.appendChild(div);
-    });
-};
+export const informationCapusleLaunches = async(launches) => {
+    
+}
