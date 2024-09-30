@@ -290,15 +290,15 @@ body {
     color: var(--color--five);
 }
 
-
 .footer {
-    background-color: brown;
     position: fixed;
     bottom: 0;
     width: 100%;
     display: grid;
-    height: 90px;
-    grid-template-columns: 38px 8fr 38px;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: 38px 500px 38px;
     grid-template-areas: ". footer__menu .";
     z-index: 1000; /* para asegurar que el footer quede siempre por encima del contenido */
 }
@@ -309,8 +309,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top-left-radius: 38px;
-    border-top-right-radius: 38px;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
 }
 
 .footer ul::after {
@@ -358,10 +358,13 @@ body {
 .nav__information {
     /* background: red; */
     grid-area: nav__2;
+    
 }
 
 .information__item {
-    background: violet; 
+     
+    height: 70vh;
+    overflow-y: auto;
 }
 
 .information__buttom {
@@ -419,31 +422,32 @@ body {
     display: flex;
     align-items: flex-end;
 }
-
 progress[value] {
-    --color: var(--color--seven);
-    --background: var(--color--one--rgb);
+    --color: var(--color--four);
+    --background: var(--color--one--rgba);
     background: var(--background);
-}
-
-
-progress[value] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    /* margin: 0 10px; */
-    height: .5em;
-    border-radius: 10em;
-}
-
-progress[value]::-webkit-progress-bar {
-    border-radius: 10em;
-    height: .5em;
-    background: var(--background);
+    width:100%;
+    height: 5px;
+    border-radius: 50%;
 }
 
 progress[value]::-webkit-progress-value {
-    border-radius: 10em;
-    background: var(--color);
+    background-color: var(--color);
 }
+
+progress[value]::-moz-progress-bar {
+    background-color: var(--color);
+}
+
+progress[value][value] {
+    background-color: var(--color);
+}
+
+progress[value="0"]::-webkit-progress-value {
+    background-color: var(--color--one);
+}
+
+progress[value="100"]::-webkit-progress-value {
+    background-color: var(--color--four);
+}
+

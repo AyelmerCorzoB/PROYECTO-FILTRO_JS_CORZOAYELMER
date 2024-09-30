@@ -90,8 +90,8 @@ export const paginationRockets = async () => {
 
             // Simula un clic en el segundo botón
             if (div.children.length > 1) {
-                let a2 = div.children[1];
-                a2.click();
+                let a3 = div.children[1];
+                a3.click();
             }
         } else {
             console.error("No se encontraron cohetes.");

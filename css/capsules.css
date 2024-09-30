@@ -7,116 +7,80 @@
 }
 
 body {
+    height: 100vh;
     font-family: Arial, sans-serif;
+    background-image: url("../storage/img/background/fondo.jpg");
+    background-position: center;
+    background-size: cover; /* Cambiado a cover para asegurar el ajuste en pantallas más pequeñas */
+    background-repeat: no-repeat;
 }
 
-#container {
-    margin-left: 2vw;
-    display: grid;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    grid-template-rows: min-content 1fr 80px; /* Header, Main, Footer */
-    grid-template-columns: 100vw;
-    
-    gap: 10px;
-}
+
 
 header {
-    background-color: purple;
+    margin-top: 2vh;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 2rem;
     grid-column: 1 / -1;
 }
 
 main {
-    width: 98%;
+    width: 80%;
+    height: 70vh;
+    margin: 5vh auto 0; /* Centraliza el main horizontalmente */
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: 200px 1fr auto;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 20vw 60vw;
     gap: 10px;
 }
 
-#left {
-    background-color: darkred;
+.descripcion_izquierda {
     color: white;
-    padding: 10px;
+    margin-right: 2vh;
+    box-shadow: 0px 0px 10px white;
+    padding: 2vh;
+    border-radius: 15px;
+}
+
+.description__item {
+    .load {
+        display: flex;
+    }
+}
+
+.imageAgg {
+    width: 500px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
 }
 
-#right {
-    background-color: lightblue;
+.imageAgg img {
+    width: 200px;
+    height: 200px;
+}
+
+.centro_del_main {
+    display: flex;
+    flex-direction: column;
     color: white;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-#center {
-    background-color: yellow;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
-    padding: 10px;
-}
-#center #box1{
-    grid-column: 1 / 4;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    overflow: auto;
-}
-
-#center #box2 {
-    grid-column: 1 / 2;
-    overflow: auto;
-}
-
-#center #box3 {
-    grid-column: 2 / 3;
-    grid-row: 2 / 4;
-    overflow: auto;
-}
-#center #box4 {
-    grid-column: 3 / 4;
-    overflow: auto;
-}
-
-#center #box5 {
-    grid-column: 1 / 2;
-    overflow: auto;
-}
-#center #box6{
-    grid-column: 3 / 4;
-    overflow: auto;
-}
-
-#center div {
-    background-color: rebeccapurple;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .footer {
-    background-color: brown;
+    
     position: fixed;
     bottom: 0;
     width: 100%;
     display: grid;
-    height: 100px;
-    grid-template-columns: 38px 8fr 38px;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: 38px 500px 38px;
     grid-template-areas: ". footer__menu .";
     z-index: 1000; /* para asegurar que el footer quede siempre por encima del contenido */
 }
@@ -127,8 +91,8 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top-left-radius: 38px;
-    border-top-right-radius: 38px;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
 }
 
 .footer ul::after {
@@ -174,29 +138,28 @@ main {
     border-bottom: 4px solid var(--color--five);
 }
 
-
 .buttom__paginacion {
-    position: fixed; /* Para que siempre esté en la misma posición */
-    right: 0; /* Alinearlo a la derecha */
-    top: 40px; /* Alinearlo a la parte superior */
+    position: fixed;
+    right: 0;
+    top: 40px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     width: min-content;
     align-content: center;
     justify-items: center;
-    height: 80vh; /* Para que abarque toda la altura de la pantalla */
-    background-color: aquamarine;
-    z-index: 1000; /* Asegurarse de que esté sobre otros elementos si es necesario */
+    height: 80vh;
+    z-index: 1000;
 }
 
+.buttom__paginacion p {
+    color: wheat;
+}
 
 .buttom__paginacion a {
     color: var(--color--five);
-    float: left;
     text-decoration: none;
     padding: 8px 16px;
-   
 }
 
 .buttom__paginacion a.activo {
@@ -208,10 +171,69 @@ main {
     background-color: var(--color--one--rgba);
 }
 
-/*quiero un media scrin que tenga como maximo unos 768px*/
-@media (max-width: 780px) {
+/* Mejoras en el Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
     
-    footer .footer {
-        width: 100vw;
+    body {
+        height: 100vh;
+        background-size: cover; /* Asegura que la imagen de fondo se ajuste */
+        overflow-y: hidden;
+    }
+
+    
+    main {
+        height: 100%;
+        width: 100%; /* Ocupa todo el ancho disponible */
+        grid-template-columns: 1fr; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2vh 0; /* Reduce el margen en pantallas pequeñas */
+    }
+
+    .descripcion_izquierda {
+        margin-right: 0;
+        padding: 2vh;
+        width: 90%; /* Aumenta el tamaño del contenedor en pantallas pequeñas */
+        box-shadow: 0px 0px 5px white; /* Reduce el tamaño de la sombra */
+    }
+
+    .imageAgg {
+        width: 100%; /* Ajusta el ancho de la imagen */
+        height: auto;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .footer ul {
+        display: flex;
+        flex-direction: row; /* Alinea los elementos del footer en una columna */
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer ul::before,
+    .footer ul::after {
+        display: none; /* Oculta los triángulos decorativos en pantallas pequeñas */
+    }
+
+    .buttom__paginacion {
+        top: 80px;
+        right: 0;
+        width: 100%; /* Abarca todo el ancho */
+        height: auto; /* Ajusta la altura */
+        flex-direction: row; /* Organiza en fila en pantallas pequeñas */
+    }
+
+    .buttom__paginacion a {
+        padding: 12px;
+        text-align: center;
     }
 }
