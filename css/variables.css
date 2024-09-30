@@ -1,12 +1,14 @@
 :root{
     --color--one: #090b20;
     --color--one--rgba: #0c0e33df;
-    --color--two: #cfcfd1;
+    --color--two: #9499C3;
     --color--three: #298bfe;
     --color--four: #e52d2d;
     --color--five: #ffffff;
     --color--six: #ffd733;
     --color--seven: #EA7B15;
+    --color--eight: #79F74B;
+    --color--nine: rgba(148, 153, 195, 0.5);
 
     --layout-description-container-x: 10px;
     --layout-description-container-y: 10px;
