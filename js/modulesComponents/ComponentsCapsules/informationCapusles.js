@@ -12,6 +12,7 @@ export const informationCapsules = async (serial, last_update) => {
   let small = document.createElement("small");
   small.textContent = last_update;
   divLast.append(h3, small);
+  
   div.append(divFirst, divLast);
   let description__item = document.querySelector("#description__item");
   description__item.append(div);
@@ -38,6 +39,7 @@ export const informationCapsuleReuseCounts = async (reuse_count) => {
   h3.textContent = "Recuento de reutilización";
   let small = document.createElement("small");
   small.textContent = reuse_count;
+  
   divLast.append(h3, small);
   div.append(divFirst, divLast);
   let description__item = document.querySelector("#description__item");
@@ -65,7 +67,9 @@ export const informationCapsuleWaterLandings = async (water_landings) => {
   h3.textContent = "Aterrizajes acuaticos";
   let small = document.createElement("small");
   small.textContent = water_landings;
+  
   divLast.append(h3, small);
+  
   div.append(divFirst, divLast);
   let description__item = document.querySelector("#description__item");
   description__item.append(div);
@@ -92,6 +96,7 @@ export const informationCapsuleLastUpdate = async (last_update) => {
   h3.textContent = "Ultima actializacion";
   let small = document.createElement("small");
   small.innerText = last_update;
+  
   divLast.append(h3, small);
   div.append(divFirst, divLast);
   let description__item = document.querySelector("#description__item");

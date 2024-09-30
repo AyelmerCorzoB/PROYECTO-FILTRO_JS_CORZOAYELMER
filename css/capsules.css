@@ -51,7 +51,12 @@ main {
     .load {
         display: flex;
     }
+    small {
+        color: var(--color--six);
+    }
 }
+
+
 
 .imageAgg {
     width: 500px;
@@ -174,69 +179,8 @@ main {
     background-color: var(--color--one--rgba);
 }
 
-/* Mejoras en el Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
-    
-    body {
-        height: 100vh;
-        background-size: cover; /* Asegura que la imagen de fondo se ajuste */
-        overflow-y: hidden;
-    }
-
-    
     main {
-        height: 100%;
-        width: 100%; /* Ocupa todo el ancho disponible */
-        grid-template-columns: 1fr; 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 2vh 0; /* Reduce el margen en pantallas pequeñas */
-    }
-
-    .descripcion_izquierda {
-        margin-right: 0;
-        padding: 2vh;
-        width: 90%; /* Aumenta el tamaño del contenedor en pantallas pequeñas */
-        box-shadow: 0px 0px 5px white; /* Reduce el tamaño de la sombra */
-    }
-
-    .imageAgg {
-        width: 100%; /* Ajusta el ancho de la imagen */
-        height: auto;
-    }
-
-    .footer {
-        grid-template-columns: 1fr;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-
-    .footer ul {
-        display: flex;
-        flex-direction: row; /* Alinea los elementos del footer en una columna */
-        padding: 20px;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footer ul::before,
-    .footer ul::after {
-        display: none; /* Oculta los triángulos decorativos en pantallas pequeñas */
-    }
-
-    .buttom__paginacion {
-        top: 80px;
-        right: 0;
-        width: 100%; /* Abarca todo el ancho */
-        height: auto; /* Ajusta la altura */
-        flex-direction: row; /* Organiza en fila en pantallas pequeñas */
-    }
-
-    .buttom__paginacion a {
-        padding: 12px;
-        text-align: center;
+        grid-template-columns: 100% ;
     }
 }
