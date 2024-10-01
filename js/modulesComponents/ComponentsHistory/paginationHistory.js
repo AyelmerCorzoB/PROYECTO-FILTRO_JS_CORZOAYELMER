@@ -34,3 +34,5 @@ function updatePaginationButtons() {
     prevButton.disabled = currentPage === 1;
     nextButton.disabled = currentPage * itemsPorPagina >= historyData.length;
 }
+
+init();
