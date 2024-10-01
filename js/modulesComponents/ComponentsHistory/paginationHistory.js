@@ -1,5 +1,5 @@
 let currentPage = 1;
-const itemsPorPagina = 4;
+const itemsPorPagina = 6;
 
 const prevButton = document.getElementById('prev-button');
 const nextButton = document.getElementById('next-button');

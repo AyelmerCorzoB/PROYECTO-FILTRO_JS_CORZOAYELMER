@@ -1,10 +1,14 @@
 @import url(variables.css);
 
-
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../storage/font/Roboto/Roboto-Regular.ttf");
+}
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto-Regular";
 }
 
 body {
@@ -43,14 +47,14 @@ body {
     width: auto;
     height: auto;
     z-index: -1;
-    filter: brightness(0.8) contrast(1.5) drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+    filter: brightness(0.5) contrast(1.9) drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
     transform: translate(-50%, -50%);
     object-fit: cover;
 }
 
 .titulo  {
     text-align: center;
-    color: var(--color--three); /* Azul */
+    color: var(--color--seven); 
     font-size: 1.2rem;
     height: 45px;
     position: sticky;
@@ -72,11 +76,12 @@ body {
 
 #history-container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 30vw 30vw;
     gap: 40px;
     width: 100%;
-    height: auto;
+    height: 80vh;
     justify-items: center;
+    margin-bottom: 50vh;
 }
 
 .history-item {
@@ -88,7 +93,7 @@ body {
     transition: transform 0.5s;
     width: 100%;
     max-width: 300px;
-    height: 200px;
+    height: 300px;
     margin: 10px 0;
     background-color: rgba(24, 24, 23, 0.342);
 }
@@ -212,8 +217,12 @@ body {
 }
 
 @media (max-width: 768px) {
+    *::-webkit-scrollbar {
+        display: none;
+    }
     body {
         width: 100vw;
+        overflow: hidden;
     }
     .container {
         grid-template-columns: 1fr;
@@ -229,6 +238,7 @@ body {
         grid-template-rows: auto auto;
         width:100vw;
         overflow-y: auto;
+        margin-bottom: 120px;
     }
 
     .history-item {
@@ -236,8 +246,9 @@ body {
         height: max-content;
     }
     .pagination {
-        position: sticky;
-        bottom: 0;
+        position: fixed;
+        bottom: 95px;
+        right: 25%;
         display: flex;
         flex-direction: row;
         margin-top: 0px;

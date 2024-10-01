@@ -1,8 +1,8 @@
 @import url(variables.css);
 
 @font-face {
-    font-family: "spaceX";
-    src: url("../");
+    font-family: "Reboto-Regular";
+    src: url("../storage/font/Roboto/Roboto-Regular.ttf");
 }
 * {
     padding: 0;
