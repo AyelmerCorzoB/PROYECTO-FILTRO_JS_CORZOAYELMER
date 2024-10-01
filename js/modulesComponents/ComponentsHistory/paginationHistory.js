@@ -1,12 +1,12 @@
 let currentPage = 1;
-const itemsPerPage = 5;
+const itemsPorPagina = 4;
 
 const prevButton = document.getElementById('prev-button');
 const nextButton = document.getElementById('next-button');
 
 async function init() {
     await fetchHistory();
-    displayHistory(currentPage, itemsPerPage);
+    displayHistory(currentPage, itemsPorPagina);
     setupEventListeners();
 }
 
@@ -14,15 +14,15 @@ function setupEventListeners() {
     prevButton.addEventListener('click', () => {
         if (currentPage > 1) {
             currentPage--;
-            displayHistory(currentPage, itemsPerPage);
+            displayHistory(currentPage, itemsPorPagina);
             updatePaginationButtons();
         }
     });
 
     nextButton.addEventListener('click', () => {
-        if (currentPage * itemsPerPage < historyData.length) {
+        if (currentPage * itemsPorPagina < historyData.length) {
             currentPage++;
-            displayHistory(currentPage, itemsPerPage);
+            displayHistory(currentPage, itemsPorPagina);
             updatePaginationButtons();
         }
     });
@@ -32,5 +32,5 @@ function setupEventListeners() {
 
 function updatePaginationButtons() {
     prevButton.disabled = currentPage === 1;
-    nextButton.disabled = currentPage * itemsPerPage >= historyData.length;
+    nextButton.disabled = currentPage * itemsPorPagina >= historyData.length;
 }

@@ -1,11 +1,13 @@
-
+@import url(variables.css);
 .footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     display: grid;
-    height: 100px;
-    grid-template-columns: 1fr 8fr 1fr;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: 38px 500px 38px;
     grid-template-areas: ". footer__menu .";
     z-index: 1000; /* para asegurar que el footer quede siempre por encima del contenido */
 }
@@ -16,8 +18,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top-left-radius: 38px;
-    border-top-right-radius: 38px;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
 }
 
 .footer ul::after {
@@ -28,7 +30,7 @@
     bottom: 0;
     width: 0;
     height: 0;
-    border-left: 0px solid transparent;
+    border-left: transparent;
     border-right: 46px solid transparent;
     border-bottom: 90px solid var(--color--one);
 }
@@ -42,7 +44,7 @@
     width: 0;
     height: 0;
     border-left: 46px solid transparent;
-    border-right: 0px solid transparent;
+    border-right: transparent;
     border-bottom: 90px solid var(--color--one);
 }
 
