@@ -1,9 +1,11 @@
 export const informationCapsules = async (serial, last_update) => {
   let div = document.createElement("div");
   div.classList.add("description__container");
+
   let divFirst = document.createElement("div");
   let img = document.createElement("img");
   img.setAttribute("src", "../../../storage/img/icons/capsule.svg");
+  divFirst.classList.add("divFirst")
   divFirst.append(img);
 
   let divLast = document.createElement("div");
@@ -11,21 +13,25 @@ export const informationCapsules = async (serial, last_update) => {
   h3.textContent = serial;
   let small = document.createElement("small");
   small.textContent = last_update;
-  divLast.append(h3, small);
   
+  divLast.append(h3,small);
+
   div.append(divFirst, divLast);
+
   let description__item = document.querySelector("#description__item");
   description__item.append(div);
+  
   // <div class="description__container">
   //     <div>
   //         <img src="http://www.example.com">
+  //         <h3>Title</h3>
   //     </div>
   //     <div>
-  //         <h3>Title</h3>
   //         <small>Lorem ipsum dolor sit amet...</small>
   //     </div>
   // </div>
 };
+
 export const informationCapsuleReuseCounts = async (reuse_count) => {
   let div = document.createElement("div");
   div.classList.add("description__container");

@@ -45,15 +45,13 @@ main {
     box-shadow: 0px 0px 10px white;
     padding: 2vh;
     border-radius: 15px;
+    
 }
 
-.description__item {
-    .load {
-        display: flex;
-    }
-    small {
-        color: var(--color--six);
-    }
+.description__container {
+    display: flex;
+    gap: 20px;
+    padding: 15px;
 }
 
 
@@ -180,7 +178,49 @@ main {
 }
 
 @media (max-width: 768px) {
-    main {
-        grid-template-columns: 100% ;
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+    .main {
+        grid-template-columns: 100%;
+        margin-top: 5vh;
+        height: auto; /* Para permitir que el contenido crezca según sea necesario */
+        padding: 10px; /* Agrega espacio para que los elementos no estén pegados a los bordes */
+    }
+    .centro_del_main {
+        display: flex;
+    }
+
+    .centro_del_main .backg {
+        display: none;
+    }
+    .descripcion_izquierda {
+        margin-right: 0; /* Elimina el margen derecho para que ocupe el 100% de su espacio */
+        padding: 2vh 1vh; /* Ajusta el padding para pantallas pequeñas */
+    }
+
+    .imageAgg {
+        width: 100%;
+        height: auto; /* Permite que las imágenes se adapten al tamaño de la pantalla */
+    }
+
+    .imageAgg img {
+        width: 100px; /* Reducción del tamaño de las imágenes */
+        height: 100px;
+    }
+
+    
+    
+
+    .pagination {
+        position: sticky;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        margin-top: 0px;
+        padding: 10px 0;
+        row-gap: 20px;
+        grid-row: 2 / 2;
     }
 }
