@@ -107,5 +107,14 @@ export const informationIzquierdaCard2 = async (website,flickr,twitter,elon_twit
 }
 
 export const informationCenterCarrusel = async () => {
+    let caja3 = document.getElementById("caja3");
+
+} 
+export const informationCenterElonk = async () => {
+    let caja3 = document.getElementById("caja3");
+    
+} 
+export const informationCenterSummary = async () => {
+    let caja3 = document.getElementById("caja3");
     
 } 
