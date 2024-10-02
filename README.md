@@ -38,10 +38,8 @@ cápsulas, hitos históricos y los planes futuros de la compañía.
 
 Para ejecutar este proyecto localmente:
 
-1. **Clona** el repositorio: `git clone https://github.com/tu-usuario/PROYECTO-FILTRO_JS_CORZOAYELMER.git`
+1. **Clona** el repositorio: `git clone https://github.com/AyelmerCorzoB/PROYECTO-FILTRO_JS_CORZOAYELMER.git`
 2. **Navega al directorio del proyecto:** `cd PROYECTO-FILTRO_JS_CORZOAYELMER`
-3. **Instala las dependencias:** `npm install` o `yarn install`
-4. **Inicia el servidor de desarrollo:** `npm start` o `yarn start`
 
 
 **[CAPTURAS]**
