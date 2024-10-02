@@ -13,7 +13,7 @@
 }
 body {
     background: linear-gradient(var(--color--one), var(--color--one--rgba));
-    height: 100%;
+    
 }
 
 *::-webkit-scrollbar {

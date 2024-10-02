@@ -67,16 +67,16 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 90vw;
+    grid-template-columns: 80vw;
     gap: 20px;
-    margin-bottom: 50vh;
+    margin-bottom: 0;
 }
 
 #history-container {
     display: grid;
     grid-template-columns: 40vw 40vw;
     gap: 40px;
-    width: 100%;
+    width: 80%;
     height: 80vh;
     justify-items: center;
     margin-bottom: 50vh;
@@ -126,7 +126,7 @@ body {
     row-gap: 20px;
     position: fixed;
     top: 40%;
-    right: 0;
+    right: 60px;
 }
 
 .pagination button {
