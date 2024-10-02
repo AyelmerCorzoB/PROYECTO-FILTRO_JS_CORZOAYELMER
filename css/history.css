@@ -67,16 +67,14 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 20vw;
+    grid-template-columns: 90vw;
     gap: 20px;
-    margin-left: 5vw;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-bottom: 50vh;
 }
 
 #history-container {
     display: grid;
-    grid-template-columns: 30vw 30vw;
+    grid-template-columns: 40vw 40vw;
     gap: 40px;
     width: 100%;
     height: 80vh;
@@ -126,11 +124,14 @@ body {
     margin-top: 20px;
     padding: 10px 0;
     row-gap: 20px;
+    position: fixed;
+    top: 40%;
+    right: 0;
 }
 
 .pagination button {
-    background-color: var(--color--three); /* Azul */
-    color: var(--color--five); /* Blanco */
+    background-color: var(--color--three); 
+    color: var(--color--five); 
     width: 100px;
     border: none;
     border-radius: 5px;

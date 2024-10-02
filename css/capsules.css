@@ -9,10 +9,12 @@
 
 body {
     height: 100vh;
+    overflow: hidden;
     font-family: Arial, sans-serif;
     background-image: url("../storage/img/background/fondo.jpg");
+    backdrop-filter: brightness(0.6) contrast(1.2);
     background-position: center;
-    background-size: cover; /* Cambiado a cover para asegurar el ajuste en pantallas más pequeñas */
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
