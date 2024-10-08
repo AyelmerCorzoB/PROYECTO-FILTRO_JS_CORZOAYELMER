@@ -42,5 +42,3 @@ Para ejecutar este proyecto localmente:
 2. **Navega al directorio del proyecto:** `cd PROYECTO-FILTRO_JS_CORZOAYELMER`
 
 
-**[CAPTURAS]**
-
