@@ -24,6 +24,12 @@ cápsulas, hitos históricos y los planes futuros de la compañía.
 * **`Desing`:** Contiene la imagen del diseño inicial.
 * **`Css`:** contiene el estilo de las paginas mostradas.
 * **`js`:** Contiene todas las funcionalidad e la pagina y modulos para hacer el llamado de Api's.
+  
+## Capturas 
+![image](https://github.com/user-attachments/assets/b333caec-6dd9-438b-8245-adb9fa6c0b42)
+![image](https://github.com/user-attachments/assets/4f3e303e-b72f-402a-b2bc-abc6b72272b5)
+![image](https://github.com/user-attachments/assets/eb060701-5538-4113-81ed-664925786b3c)
+
 
 ## Contribuyendo
 
@@ -40,5 +46,5 @@ Para ejecutar este proyecto localmente:
 
 1. **Clona** el repositorio: `git clone https://github.com/AyelmerCorzoB/PROYECTO-FILTRO_JS_CORZOAYELMER.git`
 2. **Navega al directorio del proyecto:** `cd PROYECTO-FILTRO_JS_CORZOAYELMER`
-
+3. **Ejecuta con liveServer**
 
