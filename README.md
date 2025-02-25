@@ -27,7 +27,12 @@ cápsulas, hitos históricos y los planes futuros de la compañía.
   
 ## Capturas 
 ![image](https://github.com/user-attachments/assets/b333caec-6dd9-438b-8245-adb9fa6c0b42)
+
+##
+
 ![image](https://github.com/user-attachments/assets/4f3e303e-b72f-402a-b2bc-abc6b72272b5)
+
+##
 ![image](https://github.com/user-attachments/assets/eb060701-5538-4113-81ed-664925786b3c)
 
 
